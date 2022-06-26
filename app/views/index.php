@@ -1,5 +1,11 @@
 <?php
 
+// RunCloud Assessment for Software Engineer Intern by Zeyad Naguib
+// + Demonstration code has not been changed.
+// + (Bonus 1) MVC architecture was applied (although a bit difficult in this scenario as no real view exists).
+// + (Bonus 2) Type 'composter dump-autoload' in terminal to test the autoloading feature as requested.
+// + (Bonus 3) Used abstraction for Plan and User class.
+// + (Bonus 4) Output same as one demonstrated in assessment question (without timeout feature).
 
 require_once 'app\models\classes\userModel.php';
 require_once 'app\models\classes\proPlanModel.php';

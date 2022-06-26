@@ -15,6 +15,15 @@ class ComposerStaticInitbd402b4de7dd179e018760e9274e186a
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'i' => 
+        array (
+            'interfaces\\' => 11,
+        ),
+        'c' => 
+        array (
+            'controllers\\' => 12,
+            'classes\\' => 8,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -37,6 +46,18 @@ class ComposerStaticInitbd402b4de7dd179e018760e9274e186a
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
+        'interfaces\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/models',
+        ),
+        'controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
+        'classes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/models',
+        ),
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
@@ -52,16 +73,6 @@ class ComposerStaticInitbd402b4de7dd179e018760e9274e186a
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'H' => 
-        array (
-            'HelloWorld' => 
-            array (
-                0 => __DIR__ . '/../..' . '/src',
-            ),
         ),
     );
 
@@ -660,7 +671,6 @@ class ComposerStaticInitbd402b4de7dd179e018760e9274e186a
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitbd402b4de7dd179e018760e9274e186a::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitbd402b4de7dd179e018760e9274e186a::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitbd402b4de7dd179e018760e9274e186a::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitbd402b4de7dd179e018760e9274e186a::$classMap;
 
         }, null, ClassLoader::class);

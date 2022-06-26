@@ -12,5 +12,12 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^8"
-    }
+    },
+        "autoload": {
+            "psr-4": {
+                "classes\\": "app/models",
+                "interfaces\\": "app/models",
+                "controllers\\": "app/"
+            }
+        }
 }

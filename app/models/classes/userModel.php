@@ -20,19 +20,28 @@ class User {
 
     public function connectServer(Server $server) {
         $userController = new UserController();
+
         echo "\n\nAction: Connecting to Server $server->name";
+
+        // Does not allow server connection if user isn't subscribed
         if ($this->subscribed) {
+
+            // Accepts server connection if user has no connections or if they have a Pro or Business Plan.
             if (empty($this->userConnectedServers) || $this->userPlanTier !== "Basic Plan") {
                 array_push($this->userConnectedServers, $server);
+
                 echo "\n\nAction ==> Server $server->name is connected !";
+                //If the connection is sucessful, display the user and and server info, just as in the assessment demo.
                 $userController->displayUserInformation($this->name, $this->userPlanTier, $this->userConnectedServers);
 
                 return "Connected";
             } else {
+
                 echo "\n\nError ==> User Exceeded Server Limit allowed for Plan $this->userPlanTier";
                 return "Fail";
             }
         } else {
+
             echo "\n\nError ==> User is not subscribed to any plan.";
             return "Fail";
         }
@@ -41,15 +50,19 @@ class User {
 
     public function subscribe(Plan $Plan) {
         echo "\n\nAction: Subscribing to Plan $Plan->planTier";
+
         $this->subscribed = true;
         $this->userPlanTier = $Plan->planTier;
+
         echo "\n\nSubscribed to Plan $Plan->planTier";
 
     }
 
     public function unsubscribe(){
         echo "\n\nCancelling subscription from plan $this->userPlanTier";
+
         $this->subscribed = false;
+        
         echo "\n\nYou have sucessfully unsubscribed from plan $this->userPlanTier.";
         echo "\n\nThank you for using RunCloud!";
     }
